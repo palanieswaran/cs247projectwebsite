@@ -1,4 +1,4 @@
 /* GET home page. */
 exports.index = function(req, res){
-  res.render('index', { title: 'EmotiVid' });
+  res.render('main', { title: 'EmotiVid' });
 };
