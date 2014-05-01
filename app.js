@@ -11,6 +11,7 @@ var bodyParser = require('body-parser');
 //var routes = require('./routes');
 var main = require('./routes/main')
 var prototypes = require('./routes/prototypes');
+var woz = require('./routes/woz');
 var app = express();
 
 // enable sockiet io support
@@ -42,6 +43,7 @@ app.use(app.router);
 // Declare your routes here
 app.get('/', main.index);
 app.get('/prototypes', prototypes.index);
+app.get('/woz', woz.index);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
