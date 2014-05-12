@@ -13,6 +13,7 @@ var main = require('./routes/main')
 var prototypes = require('./routes/prototypes');
 var woz = require('./routes/woz');
 var progress = require('./routes/progress');
+var userstudy = require('./routes/userstudy');
 var app = express();
 
 // enable sockiet io support
@@ -46,6 +47,7 @@ app.get('/', main.index);
 app.get('/prototypes', prototypes.index);
 app.get('/woz', woz.index);
 app.get('/progress', progress.index);
+app.get('/userstudy', userstudy.index);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
