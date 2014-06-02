@@ -16,6 +16,7 @@ var progress = require('./routes/progress');
 var userstudy = require('./routes/userstudy');
 var progress2 = require('./routes/progress2');
 var consent = require('./routes/Consent-Form');
+var presentation = require('./routes/presentation');
 var app = express();
 
 // enable sockiet io support
@@ -52,6 +53,7 @@ app.get('/progress', progress.index);
 app.get('/userstudy', userstudy.index);
 app.get('/progress2', progress2.index);
 app.get('/consent', consent.index);
+app.get('/presentation', presentation.index);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
